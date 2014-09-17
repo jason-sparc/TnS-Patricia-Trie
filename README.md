@@ -20,7 +20,7 @@ It uses a very different algorithm than most conventional Patricia Trie implemen
 	            0  1     0
 	            0  0     1
 
-> Note that all middle switches are 1-bits (and appears only in the middle of the track). A 0-bit switch can only appear in the end of a switch list with an index set to the end of the track. Also, only 1 middle switch at a time can be assigned to an index, whereas the end of the track can have 2, a 1-bit and a 0-bit switch. The end switches are also referred to as edge switches in the source code. In comparison with a node in a basic patricia trie implementation, the 1-bit switch is the right child node and the 0-bit switch is the left.
+> Note that all middle switches are 1-bits (and appears only in the middle of the track). A 0-bit switch can only appear in the end of a switch list with an index set to the end of the track. Also, only 1 middle switch at a time can be assigned to an index, whereas the end of the track can have 2, a 1-bit and a 0-bit switch. The end switches are also referred to as edge switches in the source code. In comparison with a node in a basic patricia trie implementation, the many 1-bit switches are the right child nodes and the 0-bit switch at the end is the left.
 
 &hellip;
 

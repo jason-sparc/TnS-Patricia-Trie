@@ -6,7 +6,7 @@ A flexible patricia trie implementation for Java offering rich features and pref
 This project was inspired by an existing patricia trie implementation by Roger Kapsi and Sam Berlin at <https://github.com/rkapsi/patricia-trie>; hence, there is a similar XOR metric nearness query operation.
 
 Tree Design
-===========
+-----------
 It uses a very different algorithm than most conventional Patricia Trie implementations, that I would like to originally call "**Tracks and Switches**", because nodes are treated as tracks with many alternative bit routes called switches:
 
 	--=

@@ -24,4 +24,5 @@ It uses a very different algorithm than most conventional Patricia Trie implemen
 
 A complete documentation of the algorithm, why the algorithm, and the source is not yet done, for now. Well I guess, you could study the diagram above with the source code to get an idea of how internal things works.
 
-I am also working on a much efficient (re)implementation of everything, I'll make it available when it's ready as a new branch.
+--------------------------------------------
+I am also working on a much efficient (re)implementation of everything, I'll make it available when it's ready, as a new branch.

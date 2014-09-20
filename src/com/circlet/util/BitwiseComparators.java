@@ -3,6 +3,13 @@ package com.circlet.util;
 import static java.lang.Double.doubleToLongBits;
 import static java.lang.Float.floatToIntBits;
 
+/**
+ * Provides ready-to-use {@link BitwiseComparator} implementations, as well as
+ * public utility methods (on each inner classes) to help build other forms of
+ * derivative bitwise comparators.
+ * 
+ * @author Jason
+ */
 public class BitwiseComparators {
 
 	public static final CharBits FOR_CHAR = CharBits.INSTANCE;
@@ -47,7 +54,8 @@ public class BitwiseComparators {
 		}
 
 		public static int indexOfBit(int i) {
-			if (i == 0) return -1;
+			if (i == 0)
+				return -1;
 			// @formatter:off
 			int n = 1;
 			if (i >>> 8 == 0)  { n += 8; i <<= 8; }
@@ -105,7 +113,8 @@ public class BitwiseComparators {
 		}
 
 		public static int indexOfBit(int i) {
-			if (i == 0) return -1;
+			if (i == 0)
+				return -1;
 			// @formatter:off
 			int n = 1;
 			if (i >>> 4 == 0) { n += 4; i <<= 4; }
@@ -210,7 +219,8 @@ public class BitwiseComparators {
 		}
 
 		public static int indexOfBit(int i) {
-			if (i == 0) return -1;
+			if (i == 0)
+				return -1;
 			return Integer.numberOfLeadingZeros(i);
 		}
 
@@ -261,7 +271,8 @@ public class BitwiseComparators {
 		}
 
 		public static int indexOfBit(long i) {
-			if (i == 0) return -1;
+			if (i == 0)
+				return -1;
 			return Long.numberOfLeadingZeros(i);
 		}
 
@@ -439,7 +450,8 @@ public class BitwiseComparators {
 				}
 			}
 
-			if (len1 == len2) return -1;
+			if (len1 == len2)
+				return -1;
 			return lim << SIZE_SHIFT;
 		}
 
@@ -463,8 +475,10 @@ public class BitwiseComparators {
 		public boolean checkPrefixed(char[] a, char[] prefix, boolean inclusive) {
 			int lim = prefix.length;
 			if (inclusive) {
-				if (lim > a.length) return false;
-			} else if (lim >= a.length) return false;
+				if (lim > a.length)
+					return false;
+			} else if (lim >= a.length)
+				return false;
 
 			for (int i = 0; i < lim; i++) {
 				char b1 = a[i];
@@ -524,7 +538,8 @@ public class BitwiseComparators {
 				}
 			}
 
-			if (len1 == len2) return -1;
+			if (len1 == len2)
+				return -1;
 			return lim << SIZE_SHIFT;
 		}
 
@@ -548,8 +563,10 @@ public class BitwiseComparators {
 		public boolean checkPrefixed(byte[] a, byte[] prefix, boolean inclusive) {
 			int lim = prefix.length;
 			if (inclusive) {
-				if (lim > a.length) return false;
-			} else if (lim >= a.length) return false;
+				if (lim > a.length)
+					return false;
+			} else if (lim >= a.length)
+				return false;
 
 			for (int i = 0; i < lim; i++) {
 				byte b1 = a[i];
@@ -609,7 +626,8 @@ public class BitwiseComparators {
 				}
 			}
 
-			if (len1 == len2) return -1;
+			if (len1 == len2)
+				return -1;
 			return lim << SIZE_SHIFT;
 		}
 
@@ -634,8 +652,10 @@ public class BitwiseComparators {
 				boolean inclusive) {
 			int lim = prefix.length;
 			if (inclusive) {
-				if (lim > a.length) return false;
-			} else if (lim >= a.length) return false;
+				if (lim > a.length)
+					return false;
+			} else if (lim >= a.length)
+				return false;
 
 			for (int i = 0; i < lim; i++) {
 				int b1 = a[i];
@@ -695,7 +715,8 @@ public class BitwiseComparators {
 				}
 			}
 
-			if (len1 == len2) return -1;
+			if (len1 == len2)
+				return -1;
 			return lim << SIZE_SHIFT;
 		}
 
@@ -719,8 +740,10 @@ public class BitwiseComparators {
 		public boolean checkPrefixed(int[] a, int[] prefix, boolean inclusive) {
 			int lim = prefix.length;
 			if (inclusive) {
-				if (lim > a.length) return false;
-			} else if (lim >= a.length) return false;
+				if (lim > a.length)
+					return false;
+			} else if (lim >= a.length)
+				return false;
 
 			for (int i = 0; i < lim; i++) {
 				int b1 = a[i];
@@ -780,7 +803,8 @@ public class BitwiseComparators {
 				}
 			}
 
-			if (len1 == len2) return -1;
+			if (len1 == len2)
+				return -1;
 			return lim << SIZE_SHIFT;
 		}
 
@@ -804,8 +828,10 @@ public class BitwiseComparators {
 		public boolean checkPrefixed(long[] a, long[] prefix, boolean inclusive) {
 			int lim = prefix.length;
 			if (inclusive) {
-				if (lim > a.length) return false;
-			} else if (lim >= a.length) return false;
+				if (lim > a.length)
+					return false;
+			} else if (lim >= a.length)
+				return false;
 
 			for (int i = 0; i < lim; i++) {
 				long b1 = a[i];
@@ -863,12 +889,14 @@ public class BitwiseComparators {
 				if (b1 == 0 || b1 != b2) {
 					int x = floatToIntBits(b1);
 					int y = floatToIntBits(b2);
-					if (x == y) continue;
+					if (x == y)
+						continue;
 					return (i << SIZE_SHIFT) + IntBits.indexOfBit(x ^ y);
 				}
 			}
 
-			if (len1 == len2) return -1;
+			if (len1 == len2)
+				return -1;
 			return lim << SIZE_SHIFT;
 		}
 
@@ -894,8 +922,10 @@ public class BitwiseComparators {
 				boolean inclusive) {
 			int lim = prefix.length;
 			if (inclusive) {
-				if (lim > a.length) return false;
-			} else if (lim >= a.length) return false;
+				if (lim > a.length)
+					return false;
+			} else if (lim >= a.length)
+				return false;
 
 			for (int i = 0; i < lim; i++) {
 				float b1 = a[i];
@@ -953,12 +983,14 @@ public class BitwiseComparators {
 				if (b1 == 0 || b1 != b2) {
 					long x = doubleToLongBits(b1);
 					long y = doubleToLongBits(b2);
-					if (x == y) continue;
+					if (x == y)
+						continue;
 					return (i << SIZE_SHIFT) + LongBits.indexOfBit(x ^ y);
 				}
 			}
 
-			if (len1 == len2) return -1;
+			if (len1 == len2)
+				return -1;
 			return lim << SIZE_SHIFT;
 		}
 
@@ -984,8 +1016,10 @@ public class BitwiseComparators {
 				boolean inclusive) {
 			int lim = prefix.length;
 			if (inclusive) {
-				if (lim > a.length) return false;
-			} else if (lim >= a.length) return false;
+				if (lim > a.length)
+					return false;
+			} else if (lim >= a.length)
+				return false;
 
 			for (int i = 0; i < lim; i++) {
 				double b1 = a[i];
@@ -1047,7 +1081,8 @@ public class BitwiseComparators {
 				}
 			}
 
-			if (len1 == len2) return -1;
+			if (len1 == len2)
+				return -1;
 			return lim << SIZE_SHIFT;
 		}
 
@@ -1071,8 +1106,10 @@ public class BitwiseComparators {
 		public boolean checkPrefixed(byte[] a, byte[] prefix, boolean inclusive) {
 			int lim = prefix.length;
 			if (inclusive) {
-				if (lim > a.length) return false;
-			} else if (lim >= a.length) return false;
+				if (lim > a.length)
+					return false;
+			} else if (lim >= a.length)
+				return false;
 
 			for (int i = 0; i < lim; i++) {
 				byte b1 = a[i];
@@ -1123,7 +1160,8 @@ public class BitwiseComparators {
 				}
 			}
 
-			if (len1 == len2) return -1;
+			if (len1 == len2)
+				return -1;
 			return lim;
 		}
 
@@ -1148,8 +1186,10 @@ public class BitwiseComparators {
 				boolean inclusive) {
 			int lim = prefix.length;
 			if (inclusive) {
-				if (lim > a.length) return false;
-			} else if (lim >= a.length) return false;
+				if (lim > a.length)
+					return false;
+			} else if (lim >= a.length)
+				return false;
 
 			for (int i = 0; i < lim; i++) {
 				boolean b1 = a[i];
@@ -1209,7 +1249,8 @@ public class BitwiseComparators {
 				}
 			}
 
-			if (len1 == len2) return -1;
+			if (len1 == len2)
+				return -1;
 			return lim << SIZE_SHIFT;
 		}
 

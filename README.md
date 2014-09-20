@@ -1,13 +1,13 @@
 
 Tracks and Switches, Patricia Trie based Map
 --------------------------------------------
-A flexible [patricia trie](http://en.wikipedia.org/wiki/Radix_tree) implementation for Java offering rich features and prefix-related operations. It implements the [NavigableMap](http://docs.oracle.com/javase/6/docs/api/java/util/NavigableMap.html) interface and can use any kind of object for keys as long as they can be compared bitwise via a specialized `BitwiseComparator`. It has relative performance in comparison with [TreeMap](http://docs.oracle.com/javase/6/docs/api/java/util/TreeMap.html), has as good memory footprint, and can be used as a complete replacement.
+A flexible [patricia trie](http://en.wikipedia.org/wiki/Radix_tree) implementation for Java offering rich features with prefix-related operations. It implements the [NavigableMap](http://docs.oracle.com/javase/6/docs/api/java/util/NavigableMap.html) interface and can use any kind of object for keys as long as they can be compared bitwise via a specialized `BitwiseComparator`. It has relative performance in comparison with [TreeMap](http://docs.oracle.com/javase/6/docs/api/java/util/TreeMap.html), has as good memory footprint, and can be used as a complete replacement.
 
 This project was inspired by an existing patricia trie implementation by Roger Kapsi and Sam Berlin at <https://github.com/rkapsi/patricia-trie>; hence, there is a similar XOR metric nearness query operation.
 
 Tree Design
 -----------
-It uses a very different algorithm than most conventional Patricia Trie implementations, that I would like to originally call "**Tracks and Switches**", because nodes are treated as tracks with many alternative bit routes called switches:
+It uses a very different algorithm than most conventional patricia trie implementations, that I would like to call "**Tracks and Switches**", because nodes are treated as tracks with many alternative bit routes called switches:
 
 	--=
 	  0
@@ -24,8 +24,7 @@ It uses a very different algorithm than most conventional Patricia Trie implemen
 
 &hellip;
 
---------------------------------------------
-*A complete documentation* of the algorithm, why the algorithm, and the source *is not yet done, for now.* Well I guess, you could study the diagram above with the source code to get an idea of how internal things works.
+**A complete documentation** of the algorithm, why the algorithm, and the source **is not yet available, for now.** Well I guess, you could study the diagram above with the source code to get an idea of how internal things works.
 
 --------------------------------------------
-I am also working on a much efficient (re)implementation of everything, I'll make it available when it's ready, as a new branch.
+I am also working on a much efficient (re)implementation of everything, I'll make it available when it's ready.

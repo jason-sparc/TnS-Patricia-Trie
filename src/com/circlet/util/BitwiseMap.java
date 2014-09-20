@@ -2,6 +2,15 @@ package com.circlet.util;
 
 import java.util.Map;
 
+/**
+ * A {@link PrefixMap} treating keys bitwise, providing additional bit-level
+ * access with bitwise related query operations.
+ * 
+ * @author Jason
+ * 
+ * @param <K> the type of keys maintained by this map
+ * @param <V> the type of mapped values
+ */
 public interface BitwiseMap<K, V> extends PrefixMap<K, V> {
 	/**
 	 * Returns the bitwise comparator used to order the keys in this map.
@@ -27,8 +36,13 @@ public interface BitwiseMap<K, V> extends PrefixMap<K, V> {
 	 * {@code L} is smaller than the XOR distance between {@code D} and
 	 * {@code H}.
 	 * 
-	 * @param key
-	 * @return
+	 * @param key the key
+	 * @return an entry with the closest key in a bitwise XOR metric to
+	 *         {@code key}, or {@code null} if the map is empty.
+	 * @throws ClassCastException if the specified key cannot be compared with
+	 *         the keys currently in the map
+	 * @throws NullPointerException if the specified key is null and this map
+	 *         does not permit null keys
 	 */
 	Map.Entry<K, V> nearestEntry(K key);
 
@@ -48,8 +62,13 @@ public interface BitwiseMap<K, V> extends PrefixMap<K, V> {
 	 * {@code L} is smaller than the XOR distance between {@code D} and
 	 * {@code H}.
 	 * 
-	 * @param key
-	 * @return
+	 * @param key the key
+	 * @return the closest key in a bitwise XOR metric to {@code key}, or
+	 *         {@code null} if the map is empty.
+	 * @throws ClassCastException if the specified key cannot be compared with
+	 *         the keys currently in the map
+	 * @throws NullPointerException if the specified key is null and this map
+	 *         does not permit null keys
 	 */
 	K nearestKey(K key);
 

@@ -5,9 +5,12 @@ A flexible [patricia trie](http://en.wikipedia.org/wiki/Radix_tree) implementati
 
 This project was inspired by an existing patricia trie implementation by Roger Kapsi and Sam Berlin at <https://github.com/rkapsi/patricia-trie>; hence, there is a similar XOR metric nearness query operation.
 
+However, for efficiency and performance reasons, it uses a very different algorithm tailored for ease-of-use, offers more flexibility, and leaves room for more query operations. Making it more comparable to TreeMap.
+
+
 Tree Design
 -----------
-It uses a very different algorithm than most conventional patricia trie implementations, that I would like to call "**Tracks and Switches**", because nodes are treated as tracks with many alternative bit routes called switches:
+The algorithm used is very different than most conventional patricia trie implementations. As the designer and creator, I call it the **Tracks and Switches**&trade; algorithm, because nodes are treated as tracks with many alternative bit routes called switches:
 
 	--=
 	  0
@@ -24,7 +27,7 @@ It uses a very different algorithm than most conventional patricia trie implemen
 
 &hellip;
 
-**A complete documentation** of the algorithm, why the algorithm, and the source **is not yet available, for now.** Well I guess, you could study the diagram above with the source code to get an idea of how internal things works.
+Unless there is demand, **a complete documentation** of the algorithm, why the algorithm, and the source **is not yet available, for now.** Well I guess, you could study the diagram above with the source code to get an idea of how internal things works.
 
 --------------------------------------------
 I am also working on a much efficient (re)implementation of everything, I'll make it available when it's ready.

@@ -5,7 +5,7 @@ A flexible [patricia trie](http://en.wikipedia.org/wiki/Radix_tree) implementati
 
 This project was inspired by an existing patricia trie implementation by Roger Kapsi and Sam Berlin at <https://github.com/rkapsi/patricia-trie>; hence, there is a similar XOR metric nearness query operation.
 
-However, for efficiency and performance reasons, it uses a very different algorithm tailored for ease-of-use, offers more flexibility, and leaves room for more query operations. Making it more comparable to TreeMap.
+However, for efficiency and performance reasons, it uses a very different algorithm tailored for ease-of-use, offers more flexibility, has a predictable sorting, and leaves room for more query operations. Making it more comparable to TreeMap.
 
 
 Tree Design
